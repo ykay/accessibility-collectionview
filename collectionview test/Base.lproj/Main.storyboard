@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="collectionview_test" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mYm-X9-O5K">
+                                <rect key="frame" x="20" y="20" width="560" height="250"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JSu-tD-ezr">
+                                        <rect key="frame" x="210" y="182" width="140" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="WlO-KY-7Lf"/>
+                                            <constraint firstAttribute="width" constant="140" id="cw5-UG-Tea"/>
+                                        </constraints>
+                                        <state key="normal" title="Next"/>
+                                    </button>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cfP-xS-CL3">
+                                        <rect key="frame" x="58" y="58" width="444" height="116"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="XxF-1r-JoE">
+                                            <size key="itemSize" width="50" height="50"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Z56-7v-8RY">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </view>
+                                            </collectionViewCell>
+                                        </cells>
+                                    </collectionView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottomMargin" secondItem="JSu-tD-ezr" secondAttribute="bottom" constant="30" id="6fX-bn-cKs"/>
+                                    <constraint firstItem="JSu-tD-ezr" firstAttribute="centerX" secondItem="mYm-X9-O5K" secondAttribute="centerX" id="LDT-X1-Gpt"/>
+                                    <constraint firstAttribute="height" constant="250" id="aqb-kd-btQ"/>
+                                    <constraint firstItem="cfP-xS-CL3" firstAttribute="top" secondItem="mYm-X9-O5K" secondAttribute="topMargin" constant="50" id="c37-ko-3Fa"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="cfP-xS-CL3" secondAttribute="trailing" constant="50" id="hU1-GA-rZH"/>
+                                    <constraint firstItem="cfP-xS-CL3" firstAttribute="leading" secondItem="mYm-X9-O5K" secondAttribute="leadingMargin" constant="50" id="jPc-iD-Jdk"/>
+                                    <constraint firstItem="JSu-tD-ezr" firstAttribute="top" secondItem="cfP-xS-CL3" secondAttribute="bottom" constant="8" id="sy7-bB-Ser"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4iZ-8v-0Nu">
+                                <rect key="frame" x="20" y="270" width="560" height="330"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mYm-X9-O5K" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="3n5-pR-ql5"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="4iZ-8v-0Nu" secondAttribute="bottom" id="JrN-f7-5B3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4iZ-8v-0Nu" secondAttribute="trailing" id="S7V-t9-2ST"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mYm-X9-O5K" secondAttribute="trailing" id="ahW-Mx-3zp"/>
+                            <constraint firstItem="4iZ-8v-0Nu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="bGA-K5-Ym2"/>
+                            <constraint firstItem="mYm-X9-O5K" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="dOZ-J5-UWW"/>
+                            <constraint firstItem="4iZ-8v-0Nu" firstAttribute="top" secondItem="mYm-X9-O5K" secondAttribute="bottom" id="xBC-Or-erF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="cfP-xS-CL3" id="OBx-2S-rD2"/>
+                        <outlet property="nextButton" destination="JSu-tD-ezr" id="cb7-b3-qsu"/>
+                        <outlet property="tableView" destination="4iZ-8v-0Nu" id="c7V-Q5-Tod"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
